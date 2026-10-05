@@ -19,6 +19,7 @@ canvas.bg{position:absolute;left:0;top:0}
 .center{align-items:center;text-align:center}
 .row{display:flex;align-items:center;justify-content:center;gap:36px}
 .mark{border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.mark.logo{background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.35);overflow:hidden}
 .mark img{width:100%;height:100%;object-fit:contain}
 .steps{display:flex;align-items:center;gap:0;margin-top:90px}
 .step{height:300px;border-radius:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:900;letter-spacing:-.03em;padding:0 20px}
@@ -73,7 +74,7 @@ P.scenes.forEach((s,idx)=>{
  if(T==="intro"||T==="outro"){
   el.classList.add("center");
   const name=P.brand.name,fs=fit(name,T==="intro"?190:130,1300,70);
-  const row=$("div","row");const mark=$("div","mark",P.brand.logo?`<img src="${P.brand.logo}">`:esc([...name][0]),`width:${fs*.95}px;height:${fs*.95}px;font-size:${fs*.55}px`);
+  const row=$("div","row"),ms=P.brand.logo?fs*1.35:fs*.95;const mark=$("div","mark"+(P.brand.logo?" logo":""),P.brand.logo?`<img src="${P.brand.logo}">`:esc([...name][0]),`width:${ms}px;height:${ms}px;font-size:${fs*.55}px;${P.brand.logo?`padding:${ms*.09}px`:""}`);
   row.appendChild(mark);row.appendChild($("div","title",esc(name),`font-size:${fs}px`));
   sc.hero=add(el.appendChild(row),"pop",.3);
   const line=T==="intro"?(s.tagline??P.brand.tagline):(s.line??P.brand.tagline);

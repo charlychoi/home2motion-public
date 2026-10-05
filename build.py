@@ -18,7 +18,7 @@ def data_uri(path):
     return f"data:{mt};base64," + base64.b64encode(open(path, "rb").read()).decode()
 
 
-def load_project(path):
+def load_project(path, logo=None):
     base = os.path.dirname(os.path.abspath(path)); P = json.load(open(path, encoding="utf-8"))
     P.setdefault("brand", {}); P["brand"].setdefault("colors", {})
     if not P["brand"].get("name"): sys.exit("project.json: brand.name 이 필요합니다")
@@ -27,6 +27,7 @@ def load_project(path):
         full = p if os.path.isabs(p) else os.path.join(base, p)
         if not os.path.exists(full): sys.exit(f"이미지를 찾을 수 없습니다: {full}")
         return data_uri(full)
+    if logo: P["brand"]["logo"] = logo if os.path.isabs(logo) else os.path.abspath(logo)
     if P["brand"].get("logo"): P["brand"]["logo"] = img(P["brand"]["logo"])
     for i, s in enumerate(P["scenes"]):
         if s.get("type") not in TYPES: sys.exit(f"scenes[{i}].type 은 {sorted(TYPES)} 중 하나여야 합니다 (현재: {s.get('type')})")
@@ -49,9 +50,9 @@ def timeline(P, voice_durs=None):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("project"); ap.add_argument("--out"); ap.add_argument("--fps", type=int, default=30)
-    ap.add_argument("--preview", action="store_true", help="장면별 PNG 미리보기만 생성"); ap.add_argument("--voice", action="store_true")
+    ap.add_argument("--preview", action="store_true", help="장면별 PNG 미리보기만 생성"); ap.add_argument("--voice", action="store_true"); ap.add_argument("--logo", help="브랜드 로고 이미지 경로 (project.json 의 brand.logo 대신 사용)")
     a = ap.parse_args()
-    P, base = load_project(a.project); voice_durs, voice_files = {}, {}
+    P, base = load_project(a.project, a.logo); voice_durs, voice_files = {}, {}
     if a.voice:
         from tts import synth_lines
         lines = [(f"s{i}", s["narration"]) for i, s in enumerate(P["scenes"]) if s.get("narration")]

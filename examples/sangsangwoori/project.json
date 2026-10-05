@@ -4,33 +4,130 @@
     "name": "상상우리",
     "tagline": "중장년의 경험과 지혜가 사회 혁신의 자원이 되도록",
     "url": "sangsangwoori.com",
-    "colors": { "bg": "#0B2341", "accent": "#FF7A3D", "ink": "#0B2341", "light": "#F5F7FA" }
+    "colors": {
+      "bg": "#0B2341",
+      "accent": "#FF7A3D",
+      "ink": "#0B2341",
+      "light": "#F5F7FA"
+    }
   },
-  "music": { "bpm": 120, "mood": "bright" },
-  "voice": { "model": "gemini-3.8-flash-lite-tts", "name": "Kore" },
+  "music": {
+    "bpm": 120,
+    "mood": "bright"
+  },
+  "voice": {
+    "model": "gemini-3.8-flash-lite-tts",
+    "name": "Aoede"
+  },
   "scenes": [
-    { "type": "intro", "duration": 5,
-      "narration": "중장년의 경험과 지혜가, 사회 혁신의 자원이 되도록. 상상우리입니다." },
-    { "type": "statement", "eyebrow": "OUR MISSION", "lines": ["쌓아온 *경험*은", "멈추지 않습니다"], "sub": "중장년의 경험이 사회를 바꾸는 힘이 되도록", "duration": 8,
-      "narration": "수십 년간 쌓아온 경험은 은퇴와 함께 멈추지 않습니다. 상상우리는 그 경험이 사회를 바꾸는 힘이 되도록 2013년부터 함께해 왔습니다." },
-    { "type": "flow", "eyebrow": "AI 교육 → 일자리 연계", "title": "교육이 곧 *일자리*가 됩니다", "steps": [
-        { "label": "AI 교육", "sub": "앱 활용 · AI 자서전 · 숏폼" },
-        { "label": "전문 인력", "sub": "AI 활용 컨설턴트 · 강사" },
-        { "label": "시니어 일자리", "sub": "현장에서 바로 활용" } ], "duration": 8,
-      "narration": "AI를 배우고, 전문 인력으로 성장하고, 일자리로 이어집니다. 교육이 곧 일자리가 되는 선순환을 만들고 있습니다." },
-    { "type": "list", "eyebrow": "교육 내용", "title": "생활 속에서 쓰는 *AI*", "items": ["공공·금융 앱 활용", "AI 자서전 만들기", "숏폼 영상 제작"], "duration": 8,
-      "narration": "공공·금융 앱 활용부터, 나의 이야기를 담는 AI 자서전, 숏폼 영상 제작까지. 일상에서 바로 쓰는 AI를 배웁니다." },
-    { "type": "stats", "eyebrow": "IMPACT", "title": "숫자로 만나는 *상상우리*", "items": [
-        { "value": 20, "suffix": "만+", "label": "시니어 교육 경험" },
-        { "value": 500, "suffix": "개+", "label": "일자리 창출" },
-        { "value": 2013, "suffix": "년", "label": "설립", "comma": false } ], "duration": 8,
-      "narration": "지금까지 약 20만 명의 시니어가 교육을 경험했고, 500개가 넘는 일자리가 만들어졌습니다." },
-    { "type": "showcase", "eyebrow": "현장 속으로", "title": "서울에서 경기까지, *지역 현장*으로", "big": { "value": 3700, "suffix": "여 회 교육" },
-      "chips": ["서울 3개 거점", "경기 16개 시군", "키오스크 활용", "소상공인 AI 마케팅"], "duration": 8,
-      "narration": "서울 세 곳의 거점과 경기도 열여섯 개 시군에서, 3천7백여 회의 교육을 진행했습니다. 키오스크 활용부터 소상공인 AI 마케팅까지, 현장에서 필요한 실무를 다룹니다." },
-    { "type": "statement", "eyebrow": "NEXT CAREER", "lines": ["배운 *AI*로,", "다시 일합니다"], "sub": "AI 활용 컨설턴트 · 전문 강사로 활동", "duration": 8, "visual": "none",
-      "narration": "교육을 마친 중장년은 AI 활용 컨설턴트와 전문 강사로 활동하며, 배운 것을 다시 사회에 나눕니다." },
-    { "type": "outro", "line": "중장년의 경험, *AI*로 다시 일하다", "duration": 7,
-      "narration": "중장년의 경험, AI로 다시 일하다. 상상우리." }
+    {
+      "type": "intro",
+      "duration": 5,
+      "narration": "경험이 힘이 되는 세상, 상상우리."
+    },
+    {
+      "type": "statement",
+      "eyebrow": "OUR MISSION",
+      "lines": [
+        "쌓아온 *경험*은",
+        "멈추지 않습니다"
+      ],
+      "sub": "중장년의 경험이 사회를 바꾸는 힘이 되도록",
+      "duration": 8,
+      "narration": "쌓아온 경험은 멈추지 않습니다. 그 경험이 사회를 바꾸는 힘이 됩니다."
+    },
+    {
+      "type": "flow",
+      "eyebrow": "AI 교육 → 일자리 연계",
+      "title": "교육이 곧 *일자리*가 됩니다",
+      "steps": [
+        {
+          "label": "AI 교육",
+          "sub": "앱 활용 · AI 자서전 · 숏폼"
+        },
+        {
+          "label": "전문 인력",
+          "sub": "AI 활용 컨설턴트 · 강사"
+        },
+        {
+          "label": "시니어 일자리",
+          "sub": "현장에서 바로 활용"
+        }
+      ],
+      "duration": 8,
+      "narration": "AI를 배우고, 전문 인력으로 성장해, 일자리로 이어집니다."
+    },
+    {
+      "type": "list",
+      "eyebrow": "교육 내용",
+      "title": "생활 속에서 쓰는 *AI*",
+      "items": [
+        "공공·금융 앱 활용",
+        "AI 자서전 만들기",
+        "숏폼 영상 제작"
+      ],
+      "duration": 8,
+      "narration": "공공·금융 앱부터 AI 자서전, 숏폼 제작까지 배웁니다."
+    },
+    {
+      "type": "stats",
+      "eyebrow": "IMPACT",
+      "title": "숫자로 만나는 *상상우리*",
+      "items": [
+        {
+          "value": 20,
+          "suffix": "만+",
+          "label": "시니어 교육 경험"
+        },
+        {
+          "value": 500,
+          "suffix": "개+",
+          "label": "일자리 창출"
+        },
+        {
+          "value": 2013,
+          "suffix": "년",
+          "label": "설립",
+          "comma": false
+        }
+      ],
+      "duration": 8,
+      "narration": "20만 시니어가 교육을 경험했고, 일자리 500개를 만들었습니다."
+    },
+    {
+      "type": "showcase",
+      "eyebrow": "현장 속으로",
+      "title": "서울에서 경기까지, *지역 현장*으로",
+      "big": {
+        "value": 3700,
+        "suffix": "여 회 교육"
+      },
+      "chips": [
+        "서울 3개 거점",
+        "경기 16개 시군",
+        "키오스크 활용",
+        "소상공인 AI 마케팅"
+      ],
+      "duration": 8,
+      "narration": "서울 세 곳과 경기 열여섯 개 시군에서 삼천칠백여 회 교육했습니다."
+    },
+    {
+      "type": "statement",
+      "eyebrow": "NEXT CAREER",
+      "lines": [
+        "배운 *AI*로,",
+        "다시 일합니다"
+      ],
+      "sub": "AI 활용 컨설턴트 · 전문 강사로 활동",
+      "duration": 8,
+      "visual": "none",
+      "narration": "교육을 마친 분들은 AI 컨설턴트와 전문 강사로 활동합니다."
+    },
+    {
+      "type": "outro",
+      "line": "중장년의 경험, *AI*로 다시 일하다",
+      "duration": 7,
+      "narration": "중장년의 경험, AI로 다시 일하다. 상상우리."
+    }
   ]
 }
