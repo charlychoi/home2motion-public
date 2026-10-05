@@ -10,3 +10,7 @@ frames/
 gemini_api_key.txt
 # 개인 프로젝트는 projects/ 아래에 두면 공개되지 않습니다 (examples/ 는 공개)
 projects/
+
+# 영상 파일은 공개 저장소에 올리지 않습니다
+*.mp4
+*.mov
