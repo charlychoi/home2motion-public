@@ -1,0 +1,25 @@
+{
+  "output": "demo_30s",
+  "brand": {
+    "name": "샘플컴퍼니",
+    "tagline": "일상에 *새로운 가능성*을 더합니다",
+    "url": "www.example.com",
+    "colors": { "bg": "#0B2341", "accent": "#FF7A3D", "ink": "#0B2341", "light": "#F5F7FA" }
+  },
+  "music": { "bpm": 120, "mood": "bright" },
+  "scenes": [
+    { "type": "intro", "duration": 4 },
+    { "type": "statement", "eyebrow": "OUR MISSION", "lines": ["고객의 *하루*를", "더 가볍게 만듭니다"], "sub": "복잡한 일은 줄이고, 중요한 일에 집중하세요", "duration": 6 },
+    { "type": "flow", "eyebrow": "HOW IT WORKS", "title": "세 단계로 *간단하게*", "steps": [
+        { "label": "상담", "sub": "목표와 현황 파악" },
+        { "label": "설계", "sub": "맞춤 솔루션 제안" },
+        { "label": "실행", "sub": "빠른 도입과 지원" } ], "duration": 6.5 },
+    { "type": "stats", "eyebrow": "IMPACT", "title": "숫자로 보는 *샘플컴퍼니*", "items": [
+        { "value": 12000, "suffix": "+", "label": "누적 고객" },
+        { "value": 98, "suffix": "%", "label": "고객 만족도" },
+        { "value": 2015, "suffix": "년", "label": "설립", "comma": false } ], "duration": 6.5 },
+    { "type": "showcase", "eyebrow": "SERVICES", "title": "이런 일을 *함께*합니다", "big": { "value": 3500, "suffix": "여 건 프로젝트" },
+      "chips": ["컨설팅", "교육", "맞춤 개발", "운영 지원"], "duration": 4.5 },
+    { "type": "outro", "line": "함께 만드는 *내일*", "duration": 2.5 }
+  ]
+}

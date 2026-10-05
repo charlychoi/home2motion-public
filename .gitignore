@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+# 작업 중 생성물
+out/
+frames/
+*.wav
+# 비밀키는 절대 저장소에 넣지 않습니다
+.env
+*.key
+gemini_api_key.txt
+# 개인 프로젝트는 projects/ 아래에 두면 공개되지 않습니다 (examples/ 는 공개)
+projects/

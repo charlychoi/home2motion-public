@@ -1,0 +1,3 @@
+playwright>=1.40
+numpy>=1.24
+# (선택) 내레이션 음성: google-genai
